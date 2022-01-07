@@ -1,11 +1,9 @@
-/**
- * Giorgia Pavic
- * Riccardo Sasu
- */
+
 package it.univpm.progettoPavicSasu.model;
 
 /**
- * @author Riccardo
+ * @author Giorgia Pavic
+ * @author Riccardo Sasu
  *
  */
 public class Forecast {

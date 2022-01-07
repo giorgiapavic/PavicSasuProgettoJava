@@ -12,8 +12,8 @@ import it.univpm.progettoPavicSasu.configuration.Config;
 import it.univpm.progettoPavicSasu.model.City;
 
 /**
- * @author Riccardo
- *
+ * @author Giorgia Pavic
+ * @author Riccardo Sasu
  */
 public class OpenWeatherMap {
 	 
@@ -38,9 +38,17 @@ public class OpenWeatherMap {
 				JSONObject tmp = http.request(uri);
 				
 				//JSONObject j 
-				//City c = new City(tmp.getString("name"), tmp.getLong("dt"), );
+				City c = new City();
+				c.setCityName(tmp.getString("name"));
+				c.setDate(Long.parseLong( String.valueOf(tmp.get("dt"))));
+				JSONObject main = tmp.getJSONObject("main");
+				c.setTemperature( main.getDouble("temp"));	
+				c.setHumidity(main.getDouble("humidity"));
+				c.setPressure(main.getDouble("pressure"));
+				c.setVisibility(tmp.getDouble("visibility"));
+				c.setCloud(tmp.getJSONObject("clouds").getDouble("all"));
 				
-				res.append(array.getString(i), tmp);
+				res.append(array.getString(i), c.exportJson());
 			}
 			return res;
 		}

@@ -25,7 +25,7 @@ public class APIController {
         return "Hello World!";
     }
     
-    @PostMapping("/weather")
+    @PostMapping("/citiesWeather")
     public Map<String,Object> weather(@RequestBody String json) {
     	return OpenWeatherMap.getCitiesWeather(json).toMap();
     }

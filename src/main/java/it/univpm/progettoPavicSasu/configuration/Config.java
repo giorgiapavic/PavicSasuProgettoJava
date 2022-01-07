@@ -1,12 +1,9 @@
-/**
- * Giorgia Pavic
- * Riccardo Sasu
- */
+
 package it.univpm.progettoPavicSasu.configuration;
 
 /**
- * @author Riccardo
- *
+ * @author Riccardo Sasu
+ * @author Giorgia Pavic
  */
 public class Config {
 	public final static String url = "http://api.openweathermap.org/data/2.5/weather";
