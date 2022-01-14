@@ -24,10 +24,15 @@ public class APIController {
     public String home(){
         return "Hello World!";
     }
-    
+
     @PostMapping("/citiesWeather")
-    public Map<String,Object> weather(@RequestBody String json) {
+    public Map<String,Object> citiesWeather(@RequestBody String json) {
     	return OpenWeatherMap.getCitiesWeather(json).toMap();
+    }
+
+    @PostMapping("/citiesForecast")
+    public Map<String,Object> citiesForecast(@RequestBody String json){
+        return OpenWeatherMap.getCitiesForecast(json).toMap();
     }
 
 }
