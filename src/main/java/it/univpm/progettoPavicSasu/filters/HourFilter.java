@@ -10,6 +10,12 @@ import java.util.Date;
 
 public class HourFilter implements Filter{
 
+    /**
+     *
+     * @param requestBody
+     * @param forecast
+     * @return
+     */
     @Override
     public Forecast filter(JSONObject requestBody, Forecast forecast) {
         if (requestBody.has("interval")) {

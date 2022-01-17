@@ -1,5 +1,6 @@
 package it.univpm.progettoPavicSasu.model;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
@@ -13,11 +14,13 @@ public class Forecast {
     }
 
     public JSONObject exportJSON(){
-        JSONObject res = new JSONObject();
+        JSONObject finalJson = new JSONObject();
+        JSONArray res = new JSONArray();
         for(CityForecast c : this.cityArray){
-            res.put(c.getCityName(), c.exportJson());
+            res.put(c.exportJson());
         }
-        return res;
+        finalJson.put("cities",res.toList());
+        return finalJson;
     }
 
     public int size(){

@@ -12,10 +12,14 @@ public class Measurement {
     public double cloud;
 
     /**
-     * @param date the date to set
+     * @param dt the date to set
      */
     public void setDate(long dt) {
         this.date = new Date(dt * 1000);
+    }
+
+    public void setDate(Date d) {
+        this.date = d;
     }
 
     public Date getDate(){

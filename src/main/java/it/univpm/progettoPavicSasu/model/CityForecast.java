@@ -9,7 +9,8 @@ public class CityForecast extends City{
 
     private ArrayList<Measurement> measurements = new ArrayList<Measurement>();
 
-    /*
+
+    /**
      * Costruttore vuoto della classe
      */
     public CityForecast() {
@@ -20,11 +21,16 @@ public class CityForecast extends City{
         super(cityName);
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public JSONObject exportJson() {
         JSONObject j = new JSONObject();
+        j.put("city",this.cityName);
         JSONArray arrayJson =  new JSONArray();
-        for (Measurement m: this.measurements) {
+        for (Measurement m: this.measurements) {    // foreach
             JSONObject data = new JSONObject();
             data.put("date",m.date);
             data.put("temperature", m.temperature);
@@ -57,4 +63,6 @@ public class CityForecast extends City{
     public void addMeasurement(Measurement m){
         this.measurements.add(m);
     }
+
+
 }

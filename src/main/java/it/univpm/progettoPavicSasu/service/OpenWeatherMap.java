@@ -14,6 +14,9 @@ import org.json.JSONObject;
 
 import it.univpm.progettoPavicSasu.configuration.ConfigurationCurrent;
 import it.univpm.progettoPavicSasu.model.CityWeather;
+import statistiche.Statistica;
+
+import java.text.ParseException;
 
 /**
  * @author Giorgia Pavic
@@ -58,7 +61,13 @@ public class OpenWeatherMap {
         return new JSONObject();
     }
 
-    public static JSONObject getCitiesForecast(String s) {
+    /**
+     *
+     * @param s
+     * @return
+     * @throws ParseException
+     */
+    public static JSONObject getCitiesForecast(String s) throws ParseException {
         JSONObject json = new JSONObject(s);    // converto la stringa in json
         // controllo se esiste la key
         if (json.has("cities")) {
@@ -101,7 +110,11 @@ public class OpenWeatherMap {
             forecast = dayFilter.filter(json,forecast);
             forecast = hourFilter.filter(json,forecast);
 
+            if(json.has("stats") && json.getBoolean("stats")){
+                return Statistica.getStatistica(forecast.exportJSON());
+            }
             return forecast.exportJSON();
+
         }
         return new JSONObject();
     }

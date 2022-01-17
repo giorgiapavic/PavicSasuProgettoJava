@@ -16,22 +16,29 @@ import org.springframework.web.bind.annotation.RestController;
 
 import it.univpm.progettoPavicSasu.service.OpenWeatherMap;
 
+import java.text.ParseException;
 import java.util.Map;
 @RestController
 public class APIController {
 
-    @RequestMapping("/")
-    public String home(){
-        return "Hello World!";
-    }
-
+    /**
+     *
+     * @param json
+     * @return
+     */
     @PostMapping("/citiesWeather")
     public Map<String,Object> citiesWeather(@RequestBody String json) {
     	return OpenWeatherMap.getCitiesWeather(json).toMap();
     }
 
+    /**
+     *
+     * @param json
+     * @return
+     * @throws ParseException
+     */
     @PostMapping("/citiesForecast")
-    public Map<String,Object> citiesForecast(@RequestBody String json){
+    public Map<String,Object> citiesForecast(@RequestBody String json) throws ParseException {
         return OpenWeatherMap.getCitiesForecast(json).toMap();
     }
 
