@@ -1,14 +1,8 @@
-/**
- * 
- */
+
 package it.univpm.progettoPavicSasu.Controller;
 
 import org.json.JSONObject;
 import org.springframework.web.bind.annotation.GetMapping;
-/**
- * @author Giorgia Pavic
- * @author Riccardo Sasu
- */
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,13 +12,20 @@ import it.univpm.progettoPavicSasu.service.OpenWeatherMap;
 
 import java.text.ParseException;
 import java.util.Map;
+
+/**
+ * Questa classe gestisce le chiamate al server che il client può fare
+ * @author Giorgia Pavic
+ * @author Riccardo Sasu
+ */
+
 @RestController
 public class APIController {
 
     /**
-     *
-     * @param json
-     * @return
+     *Rotta di tipo POST che mostra le previsioni del giorno corrente delle città scelte
+     * @param json 
+     * @return previsioni attuali della città scelta
      */
     @PostMapping("/citiesWeather")
     public Map<String,Object> citiesWeather(@RequestBody String json) {
@@ -32,9 +33,9 @@ public class APIController {
     }
 
     /**
-     *
+     *Rotta di tipo POST che mostra il forecast
      * @param json
-     * @return
+     * @return forecast ogni tre ore con possibilità di inserire vari filtri
      * @throws ParseException
      */
     @PostMapping("/citiesForecast")
