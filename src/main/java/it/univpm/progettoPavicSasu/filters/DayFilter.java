@@ -12,14 +12,19 @@ import java.util.Date;
  * Questa classe implementa Filter e contiene i metodi di filtraggio per impostare di quanti giorni futuri avere il forecast
  * @author Giorgia Pavic
  * @author Riccardo Sasu 
+ * Composizione del Json per applicare il filtro:
+ * {
+ *   "cities" : ["Rome,IT" , "Berlin,DE"] ,
+ *   "days" : 3
+ * }
  */
 public class DayFilter implements Filter {
   
 	/**
-	 * 
+	 * Applica il filtro per impostare di quanti giorni futuri avere il forecast
 	 * @param requestBody
 	 * @param forecast
-	 * 
+	 * @return codice json filtrato
 	 */
     @Override
     public Forecast filter(JSONObject requestBody, Forecast forecast) {
