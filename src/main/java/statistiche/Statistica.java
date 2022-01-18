@@ -10,9 +10,30 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.stream.DoubleStream;
-
+/**
+ * La classe contiene un metodo statico che permette di effettuare le statistiche sulle diverse rilevazioni del forecast
+ * 
+ * @author Giorgia Pavic
+ * @author Riccardo Sasu
+ * 
+ * Composizione del Json per ottenere le statistiche:
+ * {
+ *   "cities" : ["Rome,IT" , "Berlin,DE"] ,
+ *   "stats" : true
+ * }
+ */
 public class Statistica {
-    public static JSONObject getStatistica(JSONObject json) throws ParseException {
+   
+	/**
+	 * Metodo statico che restituisce le statistiche 
+	 *
+	 * @param json
+	 * @return json con la statistica
+	 * @throws ParseException
+	 */
+	
+	
+	public static JSONObject getStatistica(JSONObject json) throws ParseException {
         JSONArray cities = json.getJSONArray("cities");
         Forecast f = new Forecast();
 
@@ -76,7 +97,12 @@ public class Statistica {
 
         return json;
     }
-
+ 
+	/**
+	 * Questo metodo statico serve per calcolare la media e utilizza la classe stream
+	 * @param array
+	 * @return valore della media
+	 */
     private static double calcolaMedia(double[] array) {
         DoubleStream stream = Arrays.stream(array);
         Double max = stream.average().getAsDouble();
@@ -84,18 +110,33 @@ public class Statistica {
         return max;
     }
 
+    /**
+     *Questo metodo statico serve per calcolare il massimo e utilizza la classe stream
+     * @param array
+     * @return valore del massimo
+     */
     private static double calcolaMax(double[] array) {
         DoubleStream stream = Arrays.stream(array);
         Double max = stream.max().getAsDouble();
         return max;
     }
-
+ 
+    /**
+     * Questo metodo statico serve per calcolare il minimo e utilizza la classe stream
+     * @param array
+     * @return valore del minimo
+     */
     private static double calcolaMin(double[] array) {
         DoubleStream stream = Arrays.stream(array);
         Double min = stream.min().getAsDouble();
         return min;
     }
 
+    /**
+     * Questo metodo statico serve per calcolare la varianza e utilizza la classe stream
+     * @param array
+     * @return valore della varianza
+     */
     private static double calcolaVarianza(double[] array) {
         Double m = calcolaMedia(array);
         double sommaScartiQuad = 0;
