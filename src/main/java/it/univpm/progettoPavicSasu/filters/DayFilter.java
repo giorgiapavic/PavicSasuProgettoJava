@@ -9,12 +9,18 @@ import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.Date;
 /**
- * 
+ * Questa classe implementa Filter e contiene i metodi di filtraggio per impostare di quanti giorni futuri avere il forecast
  * @author Giorgia Pavic
  * @author Riccardo Sasu 
  */
 public class DayFilter implements Filter {
- 
+  
+	/**
+	 * 
+	 * @param requestBody
+	 * @param forecast
+	 * 
+	 */
     @Override
     public Forecast filter(JSONObject requestBody, Forecast forecast) {
         if (requestBody.has("days")) {
