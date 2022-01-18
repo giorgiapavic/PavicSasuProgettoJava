@@ -24,7 +24,7 @@ public class DayFilter implements Filter {
 	 * Applica il filtro per impostare di quanti giorni futuri avere il forecast
 	 * @param requestBody
 	 * @param forecast
-	 * @return codice json filtrato
+	 * @return codice filtrato
 	 */
     @Override
     public Forecast filter(JSONObject requestBody, Forecast forecast) {

@@ -8,13 +8,23 @@ import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
+/**
+ * Questa classe implementa Filter e contiene i metodi di filtraggio per impostare la fascia oraria del forecast
+ * @author Giorgia Pavic
+ * @author Riccardo Sasu 
+ * Composizione del Json per applicare il filtro:
+ * {
+ *   "cities" : ["Rome,IT" , "Berlin,DE"] ,
+ *   "interval" : "13:00->19:00"
+ * }
+ */
 public class HourFilter implements Filter{
 
     /**
-     *
+     * Applica il filtro per impostare la fascia oraria del forecast
      * @param requestBody
      * @param forecast
-     * @return
+     * @return codice filtrato
      */
     @Override
     public Forecast filter(JSONObject requestBody, Forecast forecast) {
