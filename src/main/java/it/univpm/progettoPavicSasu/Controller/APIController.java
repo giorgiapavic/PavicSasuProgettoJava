@@ -36,7 +36,7 @@ public class APIController {
      *Rotta di tipo POST che mostra il forecast
      * @param json
      * @return forecast ogni tre ore con possibilità di inserire vari filtri
-     * @throws ParseException
+     * @throws ParseException 
      */
     @PostMapping("/citiesForecast")
     public Map<String,Object> citiesForecast(@RequestBody String json) throws ParseException {
