@@ -62,7 +62,7 @@ public class CityWeather extends City{
 	}
 
 	/**
-	 * Metodo che setta  
+	 * Metodo che imposta la temperatura 
 	 * @param temperature
 	 */
 	public void setTemperature(double temperature) {
@@ -78,7 +78,7 @@ public class CityWeather extends City{
 	}
 
 	/**
-	 * 
+	 * Metodo che imposta la pressione
 	 * @param pressure
 	 */
 	public void setPressure(double pressure) {
@@ -94,7 +94,7 @@ public class CityWeather extends City{
 	}
 
 	/**
-	 * 
+	 * Metodo che imposta la visibilità
 	 * @param visibility
 	 */
 	public void setVisibility(double visibility) {
@@ -110,7 +110,7 @@ public class CityWeather extends City{
 	}
 
 	/**
-	 * 
+	 * Metodo che imposta l'umidità
 	 * @param humidity
 	 */
 	public void setHumidity(double humidity) {
@@ -126,14 +126,17 @@ public class CityWeather extends City{
 	}
 
 	/**
-	 * 
+	 * Metodo che imposta la nuvolosità
 	 * @param cloud
 	 */
 	public void setCloud(double cloud) {
 		this.measurement.cloud = cloud;
 	}
 
-
+    /**
+     * Metodo che imposta la data
+     * @param dt
+     */
 	public void setDate(long dt){
 		this.measurement.setDate(dt);
 	}
