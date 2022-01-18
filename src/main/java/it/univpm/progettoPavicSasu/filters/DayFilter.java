@@ -8,9 +8,13 @@ import org.json.JSONObject;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.Date;
-
+/**
+ * 
+ * @author Giorgia Pavic
+ * @author Riccardo Sasu 
+ */
 public class DayFilter implements Filter {
-
+ 
     @Override
     public Forecast filter(JSONObject requestBody, Forecast forecast) {
         if (requestBody.has("days")) {
