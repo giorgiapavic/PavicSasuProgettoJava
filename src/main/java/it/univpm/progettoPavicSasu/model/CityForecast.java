@@ -5,6 +5,12 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
+/**
+ * La classe definisce la struttura base del forecast
+ * @author Giorgia Pavic
+ * @author Riccardo Sasu
+ *
+ */
 public class CityForecast extends City{
 
     private ArrayList<Measurement> measurements = new ArrayList<Measurement>();
@@ -16,14 +22,18 @@ public class CityForecast extends City{
     public CityForecast() {
 
     }
-
+    
+    /**
+     * Costruttore della classe
+     * @param cityName
+     */
     public CityForecast(String cityName) {
         super(cityName);
     }
 
     /**
-     *
-     * @return
+     * Metodo per creare un json object dall'oggetto CityForecast
+     * @return j  json con le informazioni del forecast
      */
     @Override
     public JSONObject exportJson() {
@@ -43,7 +53,12 @@ public class CityForecast extends City{
         j.put("list", arrayJson.toList());
         return j;
     }
-
+    
+    /**
+     * Metodo che restituisce le misurazioni
+     * @param n  
+     * @return  valori delle misurazioni
+     */
     public Measurement getMeasurement(int n) {
         if (n < this.measurements.size()) {
             return this.measurements.get(n);
@@ -51,15 +66,24 @@ public class CityForecast extends City{
             throw new IndexOutOfBoundsException();
         }
     }
-
+    /**
+     * Metodo che restituisce la lunghezza dell'array measurements
+     * 
+     */
     public int size(){
         return this.measurements.size();
     }
-
+    /**
+     * Metodo che restituisce la lunghezza dell'array measurements
+     * 
+     */
     public int getMeasurementNumber(){
         return this.measurements.size();
     }
-
+    /**
+     * Metodo che aggiunge all'array una misurazione
+     * @param m
+     */
     public void addMeasurement(Measurement m){
         this.measurements.add(m);
     }
