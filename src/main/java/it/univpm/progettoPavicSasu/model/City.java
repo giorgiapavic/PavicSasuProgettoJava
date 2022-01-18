@@ -30,7 +30,10 @@ public abstract class City {
         this.cityName = cityName;
     }
 
-   
+   /**
+    * Metodo da implementare nelle classi che ereditano da questa
+    *
+    */
     public abstract JSONObject exportJson();
 
     /**
