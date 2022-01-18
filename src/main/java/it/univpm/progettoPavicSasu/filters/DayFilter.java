@@ -13,7 +13,7 @@ import java.util.Date;
  * @author Giorgia Pavic
  * @author Riccardo Sasu 
  * Composizione del Json per applicare il filtro:
- * {
+ * {@code
  *   "cities" : ["Rome,IT" , "Berlin,DE"] ,
  *   "days" : 3
  * }

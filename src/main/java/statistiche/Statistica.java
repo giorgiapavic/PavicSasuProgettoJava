@@ -17,7 +17,7 @@ import java.util.stream.DoubleStream;
  * @author Riccardo Sasu
  * 
  * Composizione del Json per ottenere le statistiche:
- * {
+ * {@code
  *   "cities" : ["Rome,IT" , "Berlin,DE"] ,
  *   "stats" : true
  * }
