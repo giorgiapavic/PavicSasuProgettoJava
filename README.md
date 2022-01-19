@@ -59,5 +59,16 @@ Cliccando su "SEND" in alto a destra, il programma verrà lanciato e verrà forn
     ]
 }
 ```
+### localhost:80/citiesForecast
+Questa rotta restituisce un JSONArray contenete i JSONObject che riportano le infomazioni di previsione futura con possibilità di inserire filtri e statistiche.
+L’API deve essere richiamata con il metodo HTTP POST e il body deve avere un oggetto JSON di questo tipo:
+```json
+{
+    "cities" :["Rome,IT" , "Berlin,DE"] ,
+    "days" : 2 ,
+    "interval" : "13:00->18:00" ,
+    "stats" : true
+}
+```
 
 
