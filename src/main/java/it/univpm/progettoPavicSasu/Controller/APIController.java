@@ -41,6 +41,6 @@ public class APIController {
     @PostMapping("/citiesForecast")
     public Map<String,Object> citiesForecast(@RequestBody String json) throws ParseException {
         return OpenWeatherMap.getCitiesForecast(json).toMap();
-    }
+    } 
 
 }
