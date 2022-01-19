@@ -222,4 +222,10 @@ NOTA:
 - I sistemi [Git](https://git-scm.com/) e [GitHub](https://github.com/) per il versioning del codice;
 - [Javadoc](https://github.com/giorgiapavic/PavicSasuProgettoJava/blob/main/doc/index.html) per la generazione automatica della documentazione del codice sorgente scritto in linguaggio Java.
 
+## Autori
+| Autore | Contributo |
+|:--------------:|:-------------:|
+| [Giorgia Pavic](https://github.com/giorgiapavic) | 50% |
+| [Riccardo Sasu](https://github.com/riccardosasu) | 50% |
+
 
