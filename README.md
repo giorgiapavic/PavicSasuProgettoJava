@@ -34,4 +34,30 @@ NOTA:
 1. Nell'esempio sono state scelte due città ma è possibile selezionarne a piacimento
 2. Quando si sceglie una città è necessario inserire la sigla del Paese corrispondente
 
+Cliccando su "SEND" in alto a destra, il programma verrà lanciato e verrà fornito all'utente il seguente JSON:
+```json
+{
+    "Rome,IT": [
+        {
+            "date": "2022-01-19T10:16:16.000+00:00",
+            "cloud": 40.0,
+            "visibility": 10000.0,
+            "temperature": 9.63,
+            "humidity": 69.0,
+            "pressure": 1031.0
+        }
+    ],
+    "Berlin,DE": [
+        {
+            "date": "2022-01-19T10:08:52.000+00:00",
+            "cloud": 40.0,
+            "visibility": 10000.0,
+            "temperature": 4.49,
+            "humidity": 83.0,
+            "pressure": 1020.0
+        }
+    ]
+}
+```
+
 
