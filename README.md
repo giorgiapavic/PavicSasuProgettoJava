@@ -25,4 +25,13 @@ Il programma è in grado di definire le seguenti rotte:
 ### localhost:80/citiesWeather
 Questa rotta restituisce un JSONArray contenete i JSONObject che riportano le infomazioni di previsione attuale (la data, la temperatura, la pressione, l'umidità, la visibilità e la nuvolosità)
 L’API deve essere richiamata con il metodo HTTP POST e il body deve avere un oggetto JSON di questo tipo:
+```json
+{
+    "cities" : ["Rome,IT" , "Berlin,DE"]
+}
+```
+NOTA:
+1. Nell'esempio sono state scelte due città ma è possibile selezionarne a piacimento
+2. Quando si sceglie una città è necessario inserire la sigla del Paese corrispondente
+
 
