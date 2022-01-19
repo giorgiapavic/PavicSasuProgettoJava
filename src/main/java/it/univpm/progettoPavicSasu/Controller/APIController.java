@@ -20,7 +20,7 @@ import java.util.Map;
  */
 
 @RestController
-public class APIController {
+public class APIController { 
 
     /**
      *Rotta di tipo POST che mostra le previsioni del giorno corrente delle città scelte
